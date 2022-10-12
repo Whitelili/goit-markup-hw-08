@@ -1,0 +1,41 @@
+.advantage-list {
+  display: flex;
+  flex-wrap: wrap;
+  @extend %list;
+}
+
+.advantage-list__item {
+  width: 270px;
+  margin-right: var(--card-set-gap);
+
+  &:nth-child(4n) {
+    margin-right: 0px;
+  }
+}
+
+.advantage-list__title {
+  margin-bottom: 10px;
+
+  color: var(--title-text-color);
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+/* advantage svg */
+.advantage-list__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  height: 120px;
+  border-radius: 4px;
+
+  background-color: var(--third-bg-color);
+}
+
+.advantage-list__icon {
+  width: 70px;
+  height: 70px;
+}
