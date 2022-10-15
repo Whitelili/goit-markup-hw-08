@@ -20,9 +20,7 @@
 /* what we do animation */
 .work-list__image-thumb {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %display-center;
 
   &::before {
     position: absolute;
