@@ -1,6 +1,10 @@
 %logo {
     font-family: "Raleway", sans-serif;
-    @include font(700, 26px, 1.2);
+    @include font(700, 24px, 1.17);
+   
+    @media screen and (min-width: 1200px) {
+            @include font(700, 26px, 1.2);
+        }
 
     color: var(--accent-color);
 }
@@ -8,6 +12,9 @@
 .header__logo{
 @extend %logo;
 @extend %link;
+padding-top:16px;
+padding-bottom:16px;
+
 }
 
 .logo__header {
@@ -20,6 +27,13 @@
 .footer-page__logo {
     @extend %logo;
     @extend %link;
-    display: inline-block;
+    // display: inline-block;
     margin-bottom: 20px;
+  
+    display:flex;
+   
+    @media screen and (max-width: 1199px) {
+        justify-content: center;
+        }
+    
 }
