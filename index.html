@@ -21,11 +21,34 @@
     <header class="header">
       <div class="container main-nav">
         <nav class="navigation">
-          <a href="./index.html" class="header__logo"
-            >Web<span class="logo__header">Studio</span></a>
+          <div class="mobile-header">
+            <a href="./index.html" class="header__logo"
+              >Web<span class="logo__header">Studio</span></a
+            >
+
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              class="navigation-button js-open-menu"
+            >
+              <svg
+                width="40px"
+                height="40px"
+                aria
+                label=" Вмикач мобільного меню"
+              >
+                <use
+                  class="navigation-button__icon-menu"
+                  href="./img/svg/sprite.svg#icon-menu_40px"
+                ></use>
+              </svg>
+            </button>
+          </div>
+
           <ul class="site-nav">
             <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link  current">Студія</a>
+              <a href="./index.html" class="site-nav__link current">Студія</a>
             </li>
             <li class="site-nav__item">
               <a href="./portfolio.html" class="site-nav__link">Портфоліо</a>
@@ -43,7 +66,7 @@
               rel="noopener noreferrer nofollow"
               class="auth-nav__link"
             >
-              <svg class="auth-nav__icon" width="16" height="12">
+              <svg class="auth-nav__icon" width="14" height="10">
                 <use href="./img/svg/sprite.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
@@ -56,7 +79,7 @@
               rel="noopener noreferrer nofollow"
               class="auth-nav__link"
             >
-              <svg class="auth-nav__icon" width="10" height="16">
+              <svg class="auth-nav__icon" width="10" height="14">
                 <use href="./img/svg/sprite.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -176,12 +199,41 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list__icon">
-              <img
-                src="./img/our-team/igor.jpg"
-                alt="Ігор Дем'яненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/our-team/igor-mob-450.webp   450w,
+                    ./img/our-team/igor-mob-900.webp   900w,
+                    ./img/our-team/igor-mob-1350.webp 1350w,
+                    ./img/our-team/igor-tab-354.webp   354w,
+                    ./img/our-team/igor-tab-708.webp   708w,
+                    ./img/our-team/igor-tab-1064.webp 1064w,
+                    ./img/our-team/igor-desk-270.webp  270w,
+                    ./img/our-team/igor-desk-540.webp  540w,
+                    ./img/our-team/igor-desk-810.webp  810w
+                  "
+                  type="image/webp"
+                  sizes="(min-width:1200px) 25vw, (min-width:768) 50vw, 100vw"
+                />
+
+                <img
+                  srcset="
+                    ./img/our-team/igor-mob-450.jpg   450w,
+                    ./img/our-team/igor-mob-900.jpg   900w,
+                    ./img/our-team/igor-mob-1350.jpg 1350w,
+                    ./img/our-team/igor-tab-354.jpg   354w,
+                    ./img/our-team/igor-tab-708.jpg   708w,
+                    ./img/our-team/igor-tab-1064.jpg 1064w,
+                    ./img/our-team/igor-desk-270.jpg  270w,
+                    ./img/our-team/igor-desk-540.jpg  540w,
+                    ./img/our-team/igor-desk-810.jpg  810w
+                  "
+                  sizes="(min-width:1200px) 25vw, (min-width:768) 50vw, 100vw"
+                  src="./img/our-team/igor-mob-450.jpg"
+                  alt="Ігор Дем'яненко"
+                />
+              </picture>
+
               <div class="team-list__icon-border">
                 <h3 class="team-list__title">Ігор Дем'яненко</h3>
                 <p lang="en" class="team-list__text">Product Designer</p>
@@ -239,12 +291,41 @@
               </div>
             </li>
             <li class="team-list__icon">
-              <img
-                src="./img/our-team/olga.jpg"
-                alt="Ольга Рєпіна"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/our-team/olga-mob-450.webp   450w,
+                    ./img/our-team/olga-mob-900.webp   900w,
+                    ./img/our-team/olga-mob-1350.webp 1350w,
+                    ./img/our-team/olga-tab-354.webp   354w,
+                    ./img/our-team/olga-tab-708.webp   708w,
+                    ./img/our-team/olga-tab-1064.webp 1064w,
+                    ./img/our-team/olga-desk-270.webp  270w,
+                    ./img/our-team/olga-desk-540.webp  540w,
+                    ./img/our-team/olga-desk-810.webp  810w
+                  "
+                  type="image/webp"
+                  sizes="(min-width:1200px) 25vw, (min-width:768) 50vw, 100vw"
+                />
+
+                <img
+                  srcset="
+                    ./img/our-team/olga-mob-450.jpg   450w,
+                    ./img/our-team/olga-mob-900.jpg   900w,
+                    ./img/our-team/olga-mob-1350.jpg 1350w,
+                    ./img/our-team/olga-tab-354.jpg   354w,
+                    ./img/our-team/olga-tab-708.jpg   708w,
+                    ./img/our-team/olga-tab-1064.jpg 1064w,
+                    ./img/our-team/olga-desk-270.jpg  270w,
+                    ./img/our-team/olga-desk-540.jpg  540w,
+                    ./img/our-team/olga-desk-810.jpg  810w
+                  "
+                  sizes="(min-width:1200px) 25vw, (min-width:768) 50vw, 100vw"
+                  src="./img/our-team/olga-mob-450.jpg"
+                  alt="Ольга Рєпіна"
+                />
+              </picture>
+
               <div class="team-list__icon-border">
                 <h3 class="team-list__title">Ольга Рєпіна</h3>
                 <p lang="en" class="team-list__text">Frontend Developer</p>
@@ -301,12 +382,40 @@
               </div>
             </li>
             <li class="team-list__icon">
-              <img
-                src="./img/our-team/mykola.jpg"
-                alt="Микола Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/our-team/mykola-mob-450.webp   450w,
+                    ./img/our-team/mykola-mob-900.webp   900w,
+                    ./img/our-team/mykola-mob-1350.webp 1350w,
+                    ./img/our-team/mykola-tab-354.webp   354w,
+                    ./img/our-team/mykola-tab-708.webp   708w,
+                    ./img/our-team/mykola-tab-1064.webp 1064w,
+                    ./img/our-team/mykola-desk-270.webp  270w,
+                    ./img/our-team/mykola-desk-540.webp  540w,
+                    ./img/our-team/mykola-desk-810.webp  810w
+                  "
+                  type="image/webp"
+                  sizes="(min-width:1200px) 25vw, (min-width:768) 50vw, 100vw"
+                />
+
+                <img
+                  srcset="
+                    ./img/our-team/mykola-mob-450.jpg   450w,
+                    ./img/our-team/mykola-mob-900.jpg   900w,
+                    ./img/our-team/mykola-mob-1350.jpg 1350w,
+                    ./img/our-team/mykola-tab-354.jpg   354w,
+                    ./img/our-team/mykola-tab-708.jpg   708w,
+                    ./img/our-team/mykola-tab-1064.jpg 1064w,
+                    ./img/our-team/mykola-desk-270.jpg  270w,
+                    ./img/our-team/mykola-desk-540.jpg  540w,
+                    ./img/our-team/mykola-desk-810.jpg  810w
+                  "
+                  sizes="(min-width:1200px) 25vw, (min-width:768) 50vw, 100vw"
+                  src="./img/our-team/mykola-mob-450.jpg"
+                  alt="Микола Тарасов"
+                />
+              </picture>
               <div class="team-list__icon-border">
                 <h3 class="team-list__title">Микола Тарасов</h3>
                 <p lang="en" class="team-list__text">Marketing</p>
@@ -363,12 +472,40 @@
               </div>
             </li>
             <li class="team-list__icon">
-              <img
-                src="./img/our-team/myhailo.jpg"
-                alt="Михайло Єрмаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/our-team/myhailo-mob-450.webp   450w,
+                    ./img/our-team/myhailo-mob-900.webp   900w,
+                    ./img/our-team/myhailo-mob-1350.webp 1350w,
+                    ./img/our-team/myhailo-tab-354.webp   354w,
+                    ./img/our-team/myhailo-tab-708.webp   708w,
+                    ./img/our-team/myhailo-tab-1064.webp 1064w,
+                    ./img/our-team/myhailo-desk-270.webp  270w,
+                    ./img/our-team/myhailo-desk-540.webp  540w,
+                    ./img/our-team/myhailo-desk-810.webp  810w
+                  "
+                  type="image/webp"
+                  sizes="(min-width:1200px) 25vw, (min-width:768) 50vw, 100vw"
+                />
+
+                <img
+                  srcset="
+                    ./img/our-team/myhailo-mob-450.jpg   450w,
+                    ./img/our-team/myhailo-mob-900.jpg   900w,
+                    ./img/our-team/myhailo-mob-1350.jpg 1350w,
+                    ./img/our-team/myhailo-tab-354.jpg   354w,
+                    ./img/our-team/myhailo-tab-708.jpg   708w,
+                    ./img/our-team/myhailo-tab-1064.jpg 1064w,
+                    ./img/our-team/myhailo-desk-270.jpg  270w,
+                    ./img/our-team/myhailo-desk-540.jpg  540w,
+                    ./img/our-team/myhailo-desk-810.jpg  810w
+                  "
+                  sizes="(min-width:1200px) 25vw, (min-width:768) 50vw, 100vw"
+                  src="./img/our-team/myhailo-mob-450.jpg"
+                  alt="Михайло Єрмаков"
+                />
+              </picture>
               <div class="team-list__icon-border">
                 <h3 class="team-list__title">Михайло Єрмаков</h3>
                 <p lang="en" class="team-list__text">UI Designer</p>
@@ -508,101 +645,114 @@
         </div>
       </section>
     </main>
+
     <!-- footer -->
     <footer class="footer-page">
       <div class="container main-footer">
-        <div class="communication">
-          <a href="./index.html" class="footer-page__logo"
-            >Web<span class="logo__footer">Studio</span></a
-          >
-          <address>
-            <ul class="communication-list">
-              <li class="communication-list__item">
+        <div class="communication-join-wrap">
+          <div class="communication">
+            <a href="./index.html" class="footer-page__logo"
+              >Web<span class="logo__footer">Studio</span></a
+            >
+            <address>
+              <ul class="communication-list">
+                <li class="communication-list__item">
+                  <a
+                    href="https://goo.gl/maps/879WaUZSCeZe2CB97"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    class="communication-list__adress"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="communication-list__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="communication-list__mail"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="communication-list__item">
+                  <a href="tel:+380961111111" class="communication-list__tel"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="join">
+            <p class="join__text">приєднуйтесь</p>
+            <ul class="social-media-list">
+              <li class="social-media-list__item">
                 <a
-                  href="https://goo.gl/maps/879WaUZSCeZe2CB97"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  class="communication-list__adress"
-                  >м. Київ, пр-т Лесі Українки, 26</a
+                  class="social-media-list__link"
                 >
+                  <svg class="social-media-list__icon">
+                    <use href="./img/svg/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="communication-list__item">
-                <a href="mailto:info@devstudio.com" class="communication-list__mail"
-                  >info@devstudio.com</a
+              <li class="social-media-list__item">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="social-media-list__link"
                 >
+                  <svg class="social-media-list__icon">
+                    <use href="./img/svg/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="communication-list__item">
-                <a href="tel:+380961111111" class="communication-list__tel"
-                  >+38 096 111 11 11</a
+              <li class="social-media-list__item">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="social-media-list__link"
                 >
+                  <svg class="social-media-list__icon">
+                    <use href="./img/svg/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-media-list__item">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="social-media-list__link"
+                >
+                  <svg class="social-media-list__icon">
+                    <use href="./img/svg/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
 
-        <div class="join">
-          <p class="join__text">приєднуйтесь</p>
-          <ul class="social-media-list">
-            <li class="social-media-list__item">
-              <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                class="social-media-list__link"
-              >
-                <svg class="social-media-list__icon">
-                  <use href="./img/svg/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-media-list__item">
-              <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                class="social-media-list__link"
-              >
-                <svg class="social-media-list__icon">
-                  <use href="./img/svg/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-media-list__item">
-              <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                class="social-media-list__link"
-              >
-                <svg class="social-media-list__icon">
-                  <use href="./img/svg/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-media-list__item">
-              <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                class="social-media-list__link"
-              >
-                <svg class="social-media-list__icon">
-                  <use href="./img/svg/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
         <div class="sign">
           <p class="sign__text">Підпишіться на розсилку</p>
           <form action="" class="footer-form">
-            <input type="email" name="email" placeholder="E-mail" class="footer-form__input"/>
-            <button tupe="submit" class="footer-form__button">
-              Підписатися
-              <svg class="footer-form__mark"width="24" height="24">
-                <use href="./img/svg/sprite.svg#icon-icon-send"></use>
-              </svg>
-            </button>
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              class="footer-form__input"
+            />
+            <div class="footer-form__button-wrap">
+              <button tupe="submit" class="footer-form__button">
+                Підписатися
+                <svg class="footer-form__mark" width="24" height="24">
+                  <use href="./img/svg/sprite.svg#icon-icon-send"></use>
+                </svg>
+              </button>
+            </div>
           </form>
         </div>
       </div>
@@ -620,32 +770,47 @@
           <div class="form-element">
             <label for="user_name" class="form-element__label">Ім'я</label>
             <div class="form-element__wrap">
-              <input type="text" name="username" id="user_name" class="form-element__input"/>
-              <svg class="form-element__icon"width="18" height="18">
+              <input
+                type="text"
+                name="username"
+                id="user_name"
+                class="form-element__input"
+              />
+              <svg class="form-element__icon" width="18" height="18">
                 <use href="./img/svg/sprite.svg#icon-person-black"></use>
               </svg>
             </div>
           </div>
           <div class="form-element">
-            <label for="tel"class="form-element__label">Телефон</label>
+            <label for="tel" class="form-element__label">Телефон</label>
             <div class="form-element__wrap">
-              <input type="tel" name="phonenumber" id="tel" class="form-element__input"/>
+              <input
+                type="tel"
+                name="phonenumber"
+                id="tel"
+                class="form-element__input"
+              />
               <svg class="form-element__icon" width="18" height="18">
                 <use href="./img/svg/sprite.svg#icon-phone-black"></use>
               </svg>
             </div>
           </div>
           <div class="form-element">
-            <label for="user_email"class="form-element__label">Пошта</label>
+            <label for="user_email" class="form-element__label">Пошта</label>
             <div class="form-element__wrap">
-              <input type="email" name="useremail" id="user_email" class="form-element__input"/>
+              <input
+                type="email"
+                name="useremail"
+                id="user_email"
+                class="form-element__input"
+              />
               <svg class="form-element__icon" width="18" height="18">
                 <use href="./img/svg/sprite.svg#icon-email-black"></use>
               </svg>
             </div>
           </div>
           <div class="form-element">
-            <label for="comments" class="form-element__label" >Коментар</label>
+            <label for="comments" class="form-element__label">Коментар</label>
             <textarea
               class="form-element__textarea-comments"
               name="comments"
@@ -669,17 +834,108 @@
                   <use href="./img/svg/sprite.svg#icon-icon-check"></use>
                 </svg>
               </div>
-              <span>Погоджуюся з розсилкою та приймаю </span>
+              <span class="checkbox__text"
+                >Погоджуюся з розсилкою та приймаю
+              </span>
               <a href="" class="checkbox__link"> Умови договору</a>
             </label>
           </div>
           <div class="wrap-form-button">
-<button type="submit" class="form-button">Відправити</button>
+            <button type="submit" class="form-button">Відправити</button>
           </div>
-          
         </form>
       </div>
     </div>
+
+    <!-- mobile-menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-container-button js-close-menu">
+        <svg width="40px" height="40px">
+          <use href="./img/svg/sprite.svg#icon-close_40px"></use>
+        </svg>
+      </button>
+      <div class="mobile-menu">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a href="./index.html" class="mobile-menu__link current">Студія</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="./portfolio.html" class="mobile-menu__link">Портфоліо</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Контакти</a>
+          </li>
+        </ul>
+
+        <ul class="interactions-list">
+          <li class="interactions-item">
+            <a
+              href="tel:+380961111111"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              class="interactions-link"
+            >
+              +38 096 111 11 11</a
+            >
+          </li>
+          <li class="interactions-item">
+            <a
+              href="mailto:info@devstudio.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              class="interactions-link interactions-link__email"
+            >
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-menu__social-list">
+          <li class="mobile-menu__social-item">
+            <a
+              href=""
+              class="mobile-menu__social-link"
+              rel="noopener noreferrer nofollow"
+              >Instagram</a
+            >
+            <span class="mobile-menu__border"></span>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a
+              href=""
+              class="mobile-menu__social-link"
+              rel="noopener noreferrer nofollow"
+              >Twitter</a
+            >
+            <span class="mobile-menu__border"></span>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a
+              href=""
+              class="mobile-menu__social-link"
+              rel="noopener noreferrer nofollow"
+              >Facebook</a
+            >
+            <span class="mobile-menu__border"></span>
+          </li>
+          <li class="mobile-menu__social-item">
+            <a
+              href=""
+              class="mobile-menu__social-link"
+              rel="noopener noreferrer nofollow"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

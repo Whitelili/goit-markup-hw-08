@@ -1,20 +1,27 @@
 .clients-list {
-@extend %display-center;
   @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: -15px;
 }
 
 .clients-list__item {
-  margin-right: 30px;
-  &:last-child {
-    margin-right: 0;
+  margin: 15px;
+  flex-basis: calc((100% - 4 * 15px) / 2);
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 6 * 15px) / 3);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 12 * 15px) / 6);
   }
 }
 
 .clients-list__link {
   @extend %display-center;
 
-  width: 170px;
-  height: 92px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 

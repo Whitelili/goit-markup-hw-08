@@ -1,15 +1,28 @@
 .join {
-  margin-right: auto;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .join__text,
 .sign__text {
   margin-bottom: 20px;
   text-transform: uppercase;
-  
+
   @include font(700, 16px, 1.14);
 
   color: var(--primary-white-color);
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .social-media-list {
@@ -27,22 +40,26 @@
 }
 
 .social-media-list__link {
-@extend %display-center;
+  @extend %display-center;
+  @extend %link;
 
   width: 44px;
   height: 44px;
- 
+
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 1200px) {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
   background-color: rgba(255, 255, 255, 0.1);
 
   &:hover,
   &:focus {
-    background-color: var(--accent-color);
+    @media screen and (min-width: 1200px) {
+      background-color: var(--accent-color);
+    }
   }
-
-  @extend %link;
 }
 
 .social-media-list__icon {
